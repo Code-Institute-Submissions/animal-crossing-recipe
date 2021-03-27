@@ -1,0 +1,15 @@
+.text-color li a {
+    color: black;
+}
+
+.logo-color, .logo-color a {
+    color: black;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .brand-logo {
+    white-space: nowrap;
+  }
+}
