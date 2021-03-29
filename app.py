@@ -93,7 +93,8 @@ def logout():
 
 @app.route("/add_recipe")
 def add_recipe():
-    return render_template("add_recipe.html")
+    types = mongo.db.types.find().sort("type", 1)
+    return render_template("add_recipe.html", types=types)
 
 
 if __name__ == "__main__":
