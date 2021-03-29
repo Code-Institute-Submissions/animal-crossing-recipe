@@ -6,13 +6,19 @@
     <ul class="collapsible popout">
         {% for recipe in recipes %}
         <li>
-            <div class="collapsible-header yellow darken-4">
-                <i class="fas fa-caret-down"></i>
-                <strong>{{ recipe.recipe_type }}</strong> : {{ recipe.recipe_name }}
-                {% if recipe.limited_time == "on" %}
-                    <i class="fas fa-exclamation-circle tooltipped"
-                     data-position="right" data-tooltip="LIMITED TIME ONLY"></i>
-                {% endif %}
+            <div class="collapsible-header yellow accent-4">
+                <div class="col s3">
+                    <i class="fas fa-caret-down"></i>
+                    <a href="" class="btn-small light-blue accent-4">Done</a>
+                    <a href="" class="btn-small teal accent-4">Edit</a>
+                </div>
+                <div class="col s9">
+                    <strong>{{ recipe.recipe_type }}</strong> : {{ recipe.recipe_name }}
+                    {% if recipe.limited_time == "on" %}
+                        <i class="fas fa-exclamation-circle tooltipped"
+                        data-position="right" data-tooltip="LIMITED TIME ONLY"></i>
+                    {% endif %}                    
+                </div>
             </div>
             <div class="collapsible-body">
                 <p>{{ recipe.usage }}</p>

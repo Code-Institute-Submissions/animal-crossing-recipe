@@ -3,12 +3,12 @@
 
     <h3 class="center-align">Add Recipe</h3>
 
-    <div class="row card-panel amber accent-1">
+    <div class="row card-panel yellow lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
             <!--recipe type-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix yellow-text text-darken-4"></i>
+                    <i class="fas fa-folder-open prefix yellow-text text-accent-4"></i>
                     <select id="recipe_type" name="recipe_type" class="validate" required>
                         <option value="" disabled selected>Choose your option</option>
                         {% for type in types %}
@@ -21,7 +21,7 @@
             <!--recipe name-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix yellow-text text-darken-4"></i>
+                    <i class="fas fa-pencil-alt prefix yellow-text text-accent-4"></i>
                     <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
                      type="text" class="validate" required>
                     <label for="recipe_name">Recipe Name</label>
@@ -30,7 +30,7 @@
             <!--usage-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix yellow-text text-darken-4"></i>
+                    <i class="fas fa-align-left prefix yellow-text text-accent-4"></i>
                     <textarea id="usage" name="usage" minlength="5" maxlength="200"
                      class="materialize-textarea validate" required></textarea>
                     <label for="usage">Usage</label>
@@ -39,7 +39,7 @@
             <!--materials needed-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-hammer prefix yellow-text text-darken-4"></i>
+                    <i class="fas fa-hammer prefix yellow-text text-accent-4"></i>
                     <textarea id="materials_needed" name="materials_needed" minlength="5" maxlength="200"
                      class="materialize-textarea validate" required></textarea>
                     <label for="materials_needed">Materials Needed</label>
@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <div class="switch">
-                        <i class="fas fa-exclamation-circle prefix yellow-text text-darken-4"></i>
+                        <i class="fas fa-exclamation-circle prefix yellow-text text-accent-4"></i>
                         <label for="limited_time">
                             <input type="checkbox" id="limited_time" name="limited_time">
                             <span class="lever"></span>
@@ -61,7 +61,7 @@
             <!--submit button-->
             <div class="row">
                 <div class="col s12 center-align">
-                    <button type="submit" class="btn-large yellow darken-4 waves-effect waves-light">
+                    <button type="submit" class="btn-large yellow accent-4 waves-effect waves-light">
                         Add Recipe <i class="fas fa-plus-square right"></i>
                     </button>
                 </div>

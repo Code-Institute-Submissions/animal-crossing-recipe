@@ -15,7 +15,7 @@
 
     <header>
         <!--nav bar-->
-        <nav class="nav-extended yellow darken-4">
+        <nav class="nav-extended yellow accent-4">
             <div class="nav-wrapper logo-color">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo">Animal Crossing Recipe</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-caret-down"></i></a>
@@ -55,7 +55,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h4 class="amber accent-4 center-align">{{ message }}</h4>
+                        <h4 class="yellow accent-4 center-align">{{ message }}</h4>
                     </div>
                 {% endfor %}
             {% endif %}

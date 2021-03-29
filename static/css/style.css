@@ -10,6 +10,15 @@
     line-height: 2;
 }
 
+.btn-small {
+    margin: 5px;
+}
+
+.collapsible-header .col strong {
+    margin: 5;
+    line-height: 42px;
+}
+
 @media only screen and (max-width: 600px) {
   .brand-logo {
     white-space: nowrap;
