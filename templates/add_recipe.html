@@ -3,21 +3,35 @@
 
     <h3 class="center-align">Add Recipe</h3>
 
-    <div class="row">
+    <div class="row card-panel amber accent-1">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix yellow-text text-darken-4"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="fas fa-phone prefix yellow-text text-darken-4"></i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telephone</label>
+                    <i class="fas fa-pencil-alt prefix yellow-text text-darken-4"></i>
+                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
+                     type="text" class="validate" required>
+                    <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
-        </form>
-    </div>
-        
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix yellow-text text-darken-4"></i>
+                    <textarea id="usage" name="usage" minlength="5" maxlength="200"
+                     class="materialize-textarea validate" required></textarea>
+                    <label for="usage">Usage</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <i class="fas fa-exclamation-circle prefix yellow-text text-darken-4"></i>
+                        <label for="limited_time">
+                            <input type="checkbox" id="limited_time" name="limited_time">
+                            <span class="lever"></span>
+                            Limited Time Only
+                        </label>
+                    </div>
+                </div>
+            </div>
+
 {% endblock %}
