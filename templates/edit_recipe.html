@@ -5,14 +5,18 @@
 
     <div class="row card-panel yellow lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
-            <!--recipe type-->
+            <!--recipe type selection-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix yellow-text text-accent-4"></i>
                     <select id="recipe_type" name="recipe_type" class="validate" required>
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" disabled>Choose your option</option>
                         {% for type in types %}
-                            <option value="{{ type.recipe_type }}">{{ type.recipe_type }}</option>
+                            {% if type.recipe_type == recipe.recipe_type %}
+                                <option value="{{ type.recipe_type }}" selected>{{ type.recipe_type }}</option>
+                            {% else %}
+                                <option value="{{ type.recipe_type }}">{{ type.recipe_type }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="recipe_type">Type</label>
@@ -23,7 +27,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix yellow-text text-accent-4"></i>
                     <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
-                     type="text" class="validate" required>
+                      value="{{ recipe.recipe_name }}" type="text" class="validate" required>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
@@ -32,7 +36,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix yellow-text text-accent-4"></i>
                     <textarea id="usage" name="usage" minlength="5" maxlength="200"
-                     class="materialize-textarea validate" required></textarea>
+                     class="materialize-textarea validate" required>{{ recipe.usage }}</textarea>
                     <label for="usage">Usage</label>
                 </div>
             </div>
@@ -41,7 +45,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-hammer prefix yellow-text text-accent-4"></i>
                     <textarea id="materials_needed" name="materials_needed" minlength="5" maxlength="200"
-                     class="materialize-textarea validate" required></textarea>
+                     class="materialize-textarea validate" required>{{ recipe.materials_needed }}</textarea>
                     <label for="materials_needed">Materials Needed</label>
                 </div>
             </div>
@@ -51,7 +55,11 @@
                     <div class="switch">
                         <i class="fas fa-exclamation-circle prefix yellow-text text-accent-4"></i>
                         <label for="limited_time">
-                            <input type="checkbox" id="limited_time" name="limited_time">
+                            {% if recipe.limited_time == "on" %}
+                                <input type="checkbox" id="limited_time" name="limited_time" checked>
+                            {% else %}
+                                <input type="checkbox" id="limited_time" name="limited_time">
+                            {% endif %}
                             <span class="lever"></span>
                             Limited Time Only
                         </label>
@@ -61,6 +69,10 @@
             <!--submit button-->
             <div class="row">
                 <div class="col s12 center-align">
+                    <!--cancel button-->
+                    <a href="{{ url_for('get_recipes') }}" class="btn-large deep-orange accent-4">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
                     <button type="submit" class="btn-large yellow accent-4 waves-effect waves-light">
                         Edit Recipe <i class="fas fa-edit right"></i>
                     </button>
