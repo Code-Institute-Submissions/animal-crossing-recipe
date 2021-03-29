@@ -113,10 +113,29 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    if request.method == "POST":
+        limited_time = "on" if request.form.get("limited_time") else "off"
+        submit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_type": request.form.get("recipe_type"),
+            "usage": request.form.get("usage"),
+            "materials_needed": request.form.get("materials_needed"),
+            "limited_time": limited_time,
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe Successfully Updated")
 
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     types = mongo.db.types.find().sort("recipe_type", 1)
     return render_template("edit_recipe.html", recipe=recipe, types=types)
+
+
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Deleted")
+    return redirect(url_for("get_recipes"))
 
 
 if __name__ == "__main__":
