@@ -2,26 +2,23 @@
 {% block content %}
 
 
-    {% for recipe in recipes %}
-        {{ recipe.name }}<br>
-        {{ recipe.type }}<br>
-        {{ recipe.usage }}<br>
-        {{ recipe.recipe }}<br>
-    {% endfor %}
-
     <ul class="collapsible popout">
+        {% for recipe in recipes %}
         <li>
-            <div class="collapsible-header yellow darken-4"><i class="fas fa-caret-down"></i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header yellow darken-4">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ recipe.type }}</strong> : {{ recipe.name }}
+                {% if recipe.limited_time == "on" %}
+                    <i class="fas fa-exclamation-circle tooltipped"
+                     data-position="right" data-tooltip="LIMITED TIME ONLY"></i>
+                {% endif %}
+            </div>
+            <div class="collapsible-body">
+                <p>{{ recipe.usage }}</p>
+                <p>{{ recipe.recipe }}</p>
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header yellow darken-4"><i class="fas fa-caret-down"></i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header yellow darken-4"><i class="fas fa-caret-down"></i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
