@@ -107,8 +107,16 @@ def add_recipe():
         flash("Recipe is Added")
         return redirect(url_for("get_recipes"))
 
-    types = mongo.db.types.find().sort("type", 1)
+    types = mongo.db.types.find().sort("recipe_type", 1)
     return render_template("add_recipe.html", types=types)
+
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    types = mongo.db.types.find().sort("recipe_type", 1)
+    return render_template("edit_recipe.html", recipe=recipe, types=types)
 
 
 if __name__ == "__main__":
