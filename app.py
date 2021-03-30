@@ -171,6 +171,13 @@ def edit_types(group_id):
     return render_template("edit_types.html", group=group)
 
 
+@app.route("/delete_types/<group_id>")
+def delete_types(group_id):
+    mongo.db.types.remove({"_id": ObjectId(group_id)})
+    flash("Type Successfully Deleted")
+    return redirect(url_for("get_types"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
