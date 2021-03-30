@@ -1,17 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Manage Recipes</h3>
+    <h3 class="center-align">Manage Recipes Type</h3>
 
     <div class="row">
-        {% for type in types %}
+        <div class="col s12 center-align">
+            <a href="{{ url_for('add_types') }}" class="btn-large yellow accent-4">
+                Add Type <i class="fas fa-plus-square right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for group in types %}
             <div class="col s12 m3">
                 <div class="card yellow accent-4 center-align">
                     <div class="card-content white-text">
-                        <span class="card-title">{{ type.recipe_type }}</span>
+                        <span class="card-title">{{ group.recipe_type }}</span>
                     </div>
                     <div class="card-action">
-                        <a href="#" class="btn teal accent-4">Edit</a>
+                        <a href="{{ url_for('edit_types', group_id=group._id) }}" class="btn teal accent-4">Edit</a>
                         <a href="#" class="btn light-blue accent-4">Remove</a>
                     </div>
                 </div>

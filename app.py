@@ -144,6 +144,33 @@ def get_types():
     return render_template("types.html", types=types)
 
 
+@app.route("/add_types", methods=["GET", "POST"])
+def add_types():
+    if request.method == "POST":
+        group = {
+            "recipe_type": request.form.get("recipe_type")
+        }
+        mongo.db.types.insert_one(group)
+        flash("New Type Added")
+        return redirect(url_for("get_types"))
+
+    return render_template("add_types.html")
+
+
+@app.route("/edit_types/<group_id>", methods=["GET", "POST"])
+def edit_types(group_id):
+    if request.method == "POST":
+        submit = {
+            "recipe_type": request.form.get("recipe_type")
+        }
+        mongo.db.types.update({"_id": ObjectId(group_id)}, submit)
+        flash("Type Successfully Updated")
+        return redirect(url_for("get_types"))
+
+    group = mongo.db.types.find_one({"_id": ObjectId(group_id)})
+    return render_template("edit_types.html", group=group)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
