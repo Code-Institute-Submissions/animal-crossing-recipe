@@ -7,7 +7,7 @@
         {% for recipe in recipes %}
         <li>
             <div class="collapsible-header yellow accent-4">
-                <div class="col s3">
+                <div class="col s12 m6">
                     <i class="fas fa-caret-down"></i>
                     {% if session.user|lower == recipe.created_by|lower %}
                         <!-- Modal Trigger -->
@@ -26,7 +26,7 @@
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small teal accent-4">Edit</a>
                     {% endif %}
                 </div>
-                <div class="col s9">
+                <div class="col s12 m6">
                     <strong>{{ recipe.recipe_type }}</strong> : {{ recipe.recipe_name }}
                     {% if recipe.limited_time == "on" %}
                         <i class="fas fa-exclamation-circle tooltipped"

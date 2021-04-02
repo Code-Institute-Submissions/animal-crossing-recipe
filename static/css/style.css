@@ -1,3 +1,13 @@
+body {
+    background-image: url(https://wallpaperaccess.com/full/2317617.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.collapsible-body {
+    background-color: white;
+}
+
 .text-color li a {
     color: black;
 }
