@@ -37,6 +37,7 @@
             <div class="collapsible-body">
                 <p>{{ recipe.usage }}</p>
                 <p>{{ recipe.materials_needed }}</p>
+                <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}">
                 <p><em>by: {{ recipe.created_by }}</em></p>
             </div>
         </li>

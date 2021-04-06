@@ -105,6 +105,7 @@ def add_recipe():
             "recipe_type": request.form.get("recipe_type"),
             "usage": request.form.get("usage"),
             "materials_needed": request.form.get("materials_needed"),
+            "image_url": request.form.get("image_url"),
             "limited_time": limited_time,
             "created_by": session["user"]
         }
@@ -125,6 +126,7 @@ def edit_recipe(recipe_id):
             "recipe_type": request.form.get("recipe_type"),
             "usage": request.form.get("usage"),
             "materials_needed": request.form.get("materials_needed"),
+            "image_url": request.form.get("image_url"),
             "limited_time": limited_time,
             "created_by": session["user"]
         }
