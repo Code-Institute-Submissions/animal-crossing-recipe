@@ -2,6 +2,11 @@ body {
     background-image: url(https://wallpaperaccess.com/full/2317617.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
+}
+
+.about-us  {
+    margin-top: 5em;
 }
 
 .collapsible-body {
@@ -33,4 +38,9 @@ body {
   .brand-logo {
     white-space: nowrap;
   }
+
+  .about-us {
+      margin-top: 2em;
+  }
+
 }

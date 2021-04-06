@@ -17,7 +17,7 @@
         <!--nav bar-->
         <nav class="nav-extended yellow accent-4">
             <div class="nav-wrapper logo-color">
-                <a href="{{ url_for('get_recipes') }}" class="brand-logo">Animal Crossing Recipe</a>
+                <a href="{{ url_for('index') }}" class="brand-logo">Animal Crossing DIY Recipe</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-caret-down"></i></a>
                 <ul class="right hide-on-med-and-down text-color">
                     <li><a href="{{ url_for('get_recipes') }}">DIY Recipe</a></li>
@@ -36,8 +36,8 @@
             </div>
         </nav>
 
-        <ul class="sidenav" id="mobile-demo">
-            <li><h5 class="center-align logo-color">Animal Crossing Recipe</h5></li>
+        <ul class="sidenav yellow accent-4" id="mobile-demo">
+            <li><h5 class="center-align logo-color">Animal Crossing DIY Recipe</h5></li>
             <li><a href="{{ url_for('get_recipes') }}">DIY Recipe</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
