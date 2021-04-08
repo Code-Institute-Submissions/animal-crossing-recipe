@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="row">
+    <div class="col s12 ">
+      <div class="card-panel yellow accent-4">
+        <h3 class="center-align">Oops, something is not right!</h3>
+        <p class="center-align">The page was not found or no longer exists.</p>
+        <p class="center-align"><a href="{{ url_for('index') }}" class="white-text"> Click here to return to Homepage!</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
