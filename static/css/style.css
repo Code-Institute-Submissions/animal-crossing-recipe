@@ -2,13 +2,12 @@ body {
     background-image: url(https://wallpaperaccess.com/full/2317617.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-color: #ffd600;
 }
 
 .about-us  {
     margin-top: 5em;
 }
-
 
 .text-color li a {
     color: black;
