@@ -4,17 +4,17 @@
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel yellow accent-4">
-                <h3 class="center-align">
+                <h3 class="center-align nav-heading">
                     <u>{{ username }}'s Profile</u>
                 </h3>
-                <h5 class="center-align">
+                <h5 class="center-align kiwi-font">
                     Your Recipes
                 </h5>
             </div>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row kiwi-font">
         {% for recipe in recipes %}
             {% if session.user == recipe.created_by %}
                     <div class="col s12 m3">
@@ -40,11 +40,11 @@
                                             <p><b>Do you wish to remove this Recipe?</b></p>
                                         </div>
                                         <div class="modal-footer">
-                                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="modal-close btn-small deep-orange accent-4">Agree</a>
+                                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="modal-close btn-small deep-orange accent-4 kiwi-font">Agree</a>
                                             <a href="#!" class="modal-close btn-small light-blue accent-4">Return</a>
                                         </div>
                                     </div>
-                                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small teal accent-4">Edit</a>
+                                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small teal accent-4 kiwi-font">Edit</a>
                                 {% endif %}
                             </div>
 

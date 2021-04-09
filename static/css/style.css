@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kiwi+Maru:wght@300;400&display=swap');
+
 body {
     background-image: url(https://wallpaperaccess.com/full/2317617.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #ffd600;
+}
+
+.nav-heading {
+    font-family: Dela Gothic One, sans-serif;
+}
+
+.kiwi-font {
+    font-family: Kiwi Maru, sans-serif;
 }
 
 .about-us  {
