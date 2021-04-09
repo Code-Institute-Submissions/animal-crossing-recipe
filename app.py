@@ -92,7 +92,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username, 
+        return render_template("profile.html", username=username,
         recipes=recipes)
 
     return redirect(url_for("login"))
@@ -209,7 +209,7 @@ def delete_types(group_id):
     return redirect(url_for("get_types"))
 
 
-#error404page
+# error404 page
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("error.html"), 404
