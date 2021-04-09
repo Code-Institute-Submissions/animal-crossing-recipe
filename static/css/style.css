@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kiwi+Maru:wght@300;400&display=swap');
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
     background-image: url(https://wallpaperaccess.com/full/2317617.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #ffd600;
+    margin-bottom: 60px;
 }
 
 .nav-heading {
@@ -16,7 +22,7 @@ body {
 }
 
 .about-us  {
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 .text-color li a {
@@ -37,6 +43,25 @@ body {
 
 .card-image:hover img {
     opacity: 0.6;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.footer-icon i {
+    margin-top: 1em;
+    font-size: 1.5em;
+    margin-right: 2em;
+}
+
+.footer-icon:hover i {
+    opacity: 0.5;
 }
 
 @media only screen and (max-width: 600px) {
