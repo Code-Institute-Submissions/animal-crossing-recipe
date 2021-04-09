@@ -18,18 +18,21 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Homepage
 @app.route("/")
 @app.route("/index", methods=["GET", "POST"])
 def index():
     return render_template("index.html")
 
 
+# DIY recipe page
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
+# Search Bar
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -37,6 +40,7 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Register Form
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -60,6 +64,7 @@ def register():
     return render_template("register.html")
 
 
+# Log In
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -85,6 +90,7 @@ def login():
     return render_template("login.html")
 
 
+# Profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     recipes = mongo.db.recipes.find()
@@ -98,6 +104,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Log Out
 @app.route("/logout")
 def logout():
     flash("Goodbye, hope to see you again!")
@@ -105,6 +112,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if session:
@@ -133,6 +141,7 @@ def add_recipe():
     return render_template("error.html")
 
 
+# Edit Recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -154,6 +163,7 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, types=types)
 
 
+# Delete Recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -161,6 +171,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+# Manage Type Page
 @app.route("/get_types")
 def get_types():
     if session:
@@ -171,6 +182,7 @@ def get_types():
     return render_template("error.html")
 
 
+# Add Type
 @app.route("/add_types", methods=["GET", "POST"])
 def add_types():
     if session:
@@ -188,6 +200,7 @@ def add_types():
     return render_template("error.html")
 
 
+# Edit Type
 @app.route("/edit_types/<group_id>", methods=["GET", "POST"])
 def edit_types(group_id):
     if request.method == "POST":
@@ -202,6 +215,7 @@ def edit_types(group_id):
     return render_template("edit_types.html", group=group)
 
 
+# Delete Type
 @app.route("/delete_types/<group_id>")
 def delete_types(group_id):
     mongo.db.types.remove({"_id": ObjectId(group_id)})

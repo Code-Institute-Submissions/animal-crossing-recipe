@@ -3,6 +3,7 @@
 
     <h3 class="center-align nav-heading">All Recipes</h3>
 
+    <!--Search-->
     <div class="row card-panel yellow accent-4">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -12,6 +13,7 @@
                     <label for="query" class="kiwi-font">Search Recipes, Type</label>
                 </div>
             </div>
+            <!--Search and Reset Button-->
             <div class="row">
                 <div class="col s12 center-align">
                     <a href="{{ url_for('get_recipes') }}" class="deep-orange accent-4 btn-small kiwi-font">Reset</a>
@@ -23,6 +25,7 @@
         </form>
     </div>
 
+    <!--Recipe-->
     {% if recipes|length > 0 %}
     <div class="row">
         {% for recipe in recipes %}
@@ -41,6 +44,7 @@
                         {% endif %}
                         {% if session.user|lower == recipe.created_by|lower %}
                             <!-- Modal Trigger -->
+                            <!--Remove button-->
                             <button data-target="#confirm-delete-{{ recipe._id }}" class="waves-effect waves-yellow btn-small deep-orange accent-4 modal-trigger">Remove</button>
                             <!-- Modal Structure -->
                             <div id="#confirm-delete-{{ recipe._id }}" class="modal bottom-sheet">
@@ -48,15 +52,18 @@
                                     <h4><b>Warning</b></h4>
                                     <p><b>Do you wish to remove this Recipe?</b></p>
                                 </div>
+                                <!--Pop Up button-->
                                 <div class="modal-footer">
                                     <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="modal-close btn-small deep-orange accent-4">Agree</a>
                                     <a href="#!" class="modal-close btn-small light-blue accent-4">Return</a>
                                 </div>
                             </div>
+                            <!--Edit button-->
                             <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small teal accent-4">Edit</a>
                         {% endif %}
                     </div>
 
+                    <!--Recipe Card-->
                     <div class="card-reveal yellow accent-4 kiwi-font">
                         <span class="card-title grey-text text-darken-4">
                             <b>{{ recipe.recipe_name }}</b>
@@ -72,6 +79,7 @@
         {% endfor %}
     </div>
     {% else %}
+        <!--Search not found-->
          <h3 class="yellow accent-4 center-align nav-heading">No Results Found</h3>
     {% endif %}
 

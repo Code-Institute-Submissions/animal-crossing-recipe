@@ -3,6 +3,7 @@
 
     <h3 class="center-align nav-heading">Manage Recipes Type</h3>
 
+    <!--Type-->
     <div class="row">
         <div class="col s12 center-align">
             <a href="{{ url_for('add_types') }}" class="btn-large yellow accent-4 kiwi-font">
@@ -18,9 +19,11 @@
                     <div class="card-content white-text">
                         <span class="card-title">{{ group.recipe_type }}</span>
                     </div>
+                    <!--Edit button-->
                     <div class="card-action">
                         <a href="{{ url_for('edit_types', group_id=group._id) }}" class="btn teal accent-4 kiwi-font">Edit</a>
                         <!-- Modal Trigger -->
+                        <!--Remove button-->
                         <button data-target="#confirm-delete-{{ group._id }}" class="waves-effect waves-yellow btn-small deep-orange accent-4 modal-trigger kiwi-font">Remove</button>
                         <!-- Modal Structure -->
                         <div id="#confirm-delete-{{ group._id }}" class="modal bottom-sheet">
@@ -28,6 +31,7 @@
                                 <h4><b>Warning</b></h4>
                                 <p><b>Do you wish to remove this Type?</b></p>
                             </div>
+                            <!--Pop Up button-->
                             <div class="modal-footer">
                                 <a href="{{ url_for('delete_types', group_id=group._id) }}" class="modal-close btn-small deep-orange accent-4 kiwi-font">Agree</a>
                                 <a href="#!" class="modal-close btn-small light-blue accent-4 kiwi-font">Return</a>

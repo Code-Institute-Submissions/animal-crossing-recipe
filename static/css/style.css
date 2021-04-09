@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kiwi+Maru:wght@300;400&display=swap');
 
+/*---------------------------------------------------------------------Base*/
 html {
   position: relative;
   min-height: 100%;
@@ -13,6 +14,7 @@ body {
     margin-bottom: 60px;
 }
 
+/*---------------------------------------------------------------------Font*/
 .nav-heading {
     font-family: Dela Gothic One, sans-serif;
 }
@@ -21,10 +23,12 @@ body {
     font-family: Kiwi Maru, sans-serif;
 }
 
+/*---------------------------------------------------------------------Index*/
 .about-us  {
     margin-top: 3em;
 }
 
+/*---------------------------------------------------------------------Navbar*/
 .text-color li a {
     color: black;
 }
@@ -33,18 +37,22 @@ body {
     color: black;
 }
 
+/*---------------------------------------------------------------------flash message*/
 .flashes h4 {
     line-height: 2;
 }
 
+/*---------------------------------------------------------------------Button*/
 .btn-small {
     margin: 5px;
 }
 
+/*---------------------------------------------------------------------Image Hover Effect*/
 .card-image:hover img {
     opacity: 0.6;
 }
 
+/*---------------------------------------------------------------------Footer*/
 footer {
   position: absolute;
   bottom: 0;
@@ -64,6 +72,7 @@ footer {
     opacity: 0.5;
 }
 
+/*---------------------------------------------------------------------Mobile Css*/
 @media only screen and (max-width: 600px) {
   .brand-logo {
     white-space: nowrap;
