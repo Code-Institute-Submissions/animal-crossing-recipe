@@ -109,6 +109,12 @@ def logout():
 def add_recipe():
     if session:
         if request.method == "POST":
+            existing_recipes = mongo.db.recipes.find_one(
+                {"recipe_name": request.form.get("recipe_name")})
+            if existing_recipes:
+                flash("Recipes already exists")
+                return redirect(url_for("add_recipe"))
+
             limited_time = "on" if request.form.get("limited_time") else "off"
             recipe = {
                 "recipe_name": request.form.get("recipe_name"),
