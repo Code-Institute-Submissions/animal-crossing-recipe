@@ -87,11 +87,13 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    recipes = mongo.db.recipes.find()
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username, 
+        recipes=recipes)
 
     return redirect(url_for("login"))
 
@@ -99,29 +101,30 @@ def profile(username):
 @app.route("/logout")
 def logout():
     flash("Goodbye, hope to see you again!")
-    session.pop("user")
+    session.clear()
     return redirect(url_for("login"))
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-    if request.method == "POST":
-        limited_time = "on" if request.form.get("limited_time") else "off"
-        recipe = {
-            "recipe_name": request.form.get("recipe_name"),
-            "recipe_type": request.form.get("recipe_type"),
-            "usage": request.form.get("usage"),
-            "materials_needed": request.form.get("materials_needed"),
-            "image_url": request.form.get("image_url"),
-            "limited_time": limited_time,
-            "created_by": session["user"]
-        }
-        mongo.db.recipes.insert_one(recipe)
-        flash("Recipe is Added")
-        return redirect(url_for("get_recipes"))
-
-    types = mongo.db.types.find().sort("recipe_type", 1)
-    return render_template("add_recipe.html", types=types)
+    if session:
+        if request.method == "POST":
+            limited_time = "on" if request.form.get("limited_time") else "off"
+            recipe = {
+                "recipe_name": request.form.get("recipe_name"),
+                "recipe_type": request.form.get("recipe_type"),
+                "usage": request.form.get("usage"),
+                "materials_needed": request.form.get("materials_needed"),
+                "image_url": request.form.get("image_url"),
+                "limited_time": limited_time,
+                "created_by": session["user"]
+            }
+            mongo.db.recipes.insert_one(recipe)
+            flash("Recipe is Added")
+            return redirect(url_for("get_recipes"))
+        types = mongo.db.types.find().sort("recipe_type", 1)
+        return render_template("add_recipe.html", types=types)
+    return render_template("error.html")
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
@@ -192,7 +195,7 @@ def delete_types(group_id):
     return redirect(url_for("get_types"))
 
 
-#error404 page
+#error404page
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("error.html"), 404

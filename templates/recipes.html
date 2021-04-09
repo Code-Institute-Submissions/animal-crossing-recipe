@@ -32,9 +32,9 @@
                         <img class="activator" src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}">
                     </div>
                     <div class="card-content yellow accent-4">
-                        <strong>{{ recipe.recipe_type }}</strong> : 
+                        <b>{{ recipe.recipe_name }}</b> 
                         <i class="fas fa-ellipsis-v right"></i>
-                        <p>{{ recipe.recipe_name }}</p>
+                        <p>{{ recipe.recipe_type }}</p>
                         {% if recipe.limited_time == "on" %}
                             <i class="fas fa-exclamation-circle right tooltipped"
                             data-position="right" data-tooltip="LIMITED TIME ONLY"></i>
@@ -59,9 +59,9 @@
 
                     <div class="card-reveal yellow accent-4">
                         <span class="card-title grey-text text-darken-4">
-                            <strong>{{ recipe.recipe_type }}</strong> :
+                            <b>{{ recipe.recipe_name }}</b>
                             <i class="fas fa-times right"></i>
-                            <p>{{ recipe.recipe_name }}</p>
+                            <p>{{ recipe.recipe_type }}</p>
                         </span>
                         <p>{{ recipe.usage }}</p>
                         <p>{{ recipe.materials_needed }}</p>
