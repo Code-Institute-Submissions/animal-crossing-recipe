@@ -157,21 +157,29 @@ def delete_recipe(recipe_id):
 
 @app.route("/get_types")
 def get_types():
-    types = list(mongo.db.types.find().sort("recipe_type", 1))
-    return render_template("types.html", types=types)
+    if session:
+        if session["user"] == "admin":
+            types = list(mongo.db.types.find().sort("recipe_type", 1))
+            return render_template("types.html", types=types)
+        return render_template("error.html")
+    return render_template("error.html")
 
 
 @app.route("/add_types", methods=["GET", "POST"])
 def add_types():
-    if request.method == "POST":
-        group = {
-            "recipe_type": request.form.get("recipe_type")
-        }
-        mongo.db.types.insert_one(group)
-        flash("New Type Added")
-        return redirect(url_for("get_types"))
+    if session:
+        if session["user"] == "admin":
+            if request.method == "POST":
+                group = {
+                    "recipe_type": request.form.get("recipe_type")
+                }
+                mongo.db.types.insert_one(group)
+                flash("New Type Added")
+                return redirect(url_for("get_types"))
 
-    return render_template("add_types.html")
+            return render_template("add_types.html")
+        return render_template("error.html")
+    return render_template("error.html")
 
 
 @app.route("/edit_types/<group_id>", methods=["GET", "POST"])
