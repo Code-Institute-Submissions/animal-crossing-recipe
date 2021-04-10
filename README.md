@@ -106,6 +106,71 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
       used for generating HTML templates and accessing/processing data sent from the frontend.)
       9. [jQuery](https://jquery.com/)(A Javascript library that simplifies manipulation of of the HTML DOM.)
 
+- ## Testing
+     1. Tested HTML code via [W3C Markup Validator](https://validator.w3.org/) There were errors showing where the validator is unable to read the Jinja2 language. 
+     Flask creates HTML files using templates, by pulling variables from the backend.
+     2. Tested CSS via [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/) and results show 1 warning about imported style sheets are not checked in direct input and file upload modes but it's not affecting the site. 
+     3. Tested Javascript via [JSHint](https://jshint.com/) there were no issues.
+     4. For the Python code, the cornflaked-linter(flake8) extension is installed in the development environment. This gave a live validation check for the code.
+     5. The Website was tested on Google Chrome and Firefox and there are no errors.
+     6. The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 7, 8 & X and there are no errors.
+     7. A large amount of testing was done to ensure all pages and javascript were working correctly.
+
+
+- ## Testing User Stories from User Experience (UX) Section
+    As a visitor of the site, I wish to:
+
+  - I would like to browse the website without registering or signing up.
+
+    Visitor can browse the recipes anytime they want without register or logging in.
+
+  - I would like to register an account for the website. 
+    
+    Visitor can register an account for free and the link can be found via navbar.
+
+  - I would like to register an account for the website.
+
+  As a Registered User of the site, I wish to:
+
+  - I would like to login to the website.
+    
+    User can find the log in page from the navbar.
+
+  - I would like to edit the recipes.
+
+    User can click the Edit button on the recipe at either DIY recipe page or Profile page to start 
+    editing recipe that's created by user.
+
+  - I would like to add a recipe to the website.
+
+    User can add recipe by clicking on the Add DIY Recipe on navbar.
+
+  - I would like to view my recipes.
+    
+    User can view it on their profile
+
+  - I would like to remove my recipe. 
+
+    User can remove recipe that's created by user on user's profile or DIY recipe page and a popout message will 
+    appear as a warning to confirm remove.
+
+  As a Administrative of the site, I wish to:
+
+  - I would like to add a type to the database. 
+
+    Admin can add more type selection by clicking on Manage Type at navbar that's only accessable for admin only.
+
+  - I would like to edit an existing recipe.
+
+    Admin can find the Edit button on the recipe at either DIY recipe page or profile page to start 
+    editing recipe.
+
+  - I would like to remove an existing recipe.
+
+    Admin can find the delete button on the recipe at either DIY recipe page or profile page to remove the recipe and
+    a popout message will appear as a warning to confirm remove.
+  
+
 - ## Database
     - ### Mongo DB
         MongoDB is the database used to store my collection of data. There are three collections of data - recipes, types and users. 

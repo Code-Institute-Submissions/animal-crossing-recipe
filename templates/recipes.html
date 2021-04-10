@@ -42,7 +42,7 @@
                             <i class="fas fa-exclamation-circle right tooltipped"
                             data-position="right" data-tooltip="LIMITED TIME ONLY"></i>
                         {% endif %}
-                        {% if session.user|lower == recipe.created_by|lower %}
+                        {% if session.user|lower == recipe.created_by|lower or session.user == "admin" %}
                             <!-- Modal Trigger -->
                             <!--Remove button-->
                             <button data-target="#confirm-delete-{{ recipe._id }}" class="waves-effect waves-yellow btn-small deep-orange accent-4 modal-trigger">Remove</button>
