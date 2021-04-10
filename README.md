@@ -118,7 +118,9 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
 
   ### Testing - Search Bar
     Testing was done on the search bar by typing the recipes name that exist and the recipe that does not exist.
+     - The searched recipe appear when it exist in database. 
     ![](./static/readme/searchbar.png) 
+     - The searched recipe does not appear and a message of no result found appear when it does not exist in database.
     ![](./static/readme/searchnotfound.png) 
 
   ### Testing - Log In and Register Form
@@ -126,6 +128,11 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
      - A red line appears and please fill out this field message appear when there is an empty entry or less than 5 characters in "Username" and less than 8 characters in "Password" field.
     ![](./static/readme/login.png) 
     ![](./static/readme/register.png) 
+
+  ### Testing - Remove button
+    Testing was performed on the remove button for both recipes and types.
+     - A pop up warning message will appear when you click the remove button to double confirm if you really want to remove it.
+    ![](./static/readme/warning.png) 
 
 - ## Testing User Stories from User Experience (UX) Section
     As a visitor of the site, I wish to:
