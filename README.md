@@ -144,4 +144,39 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
         app.config["MONGO_URI"] = "The URL string, ensure you replace the password holder with your own user password"
         app.secret_key = "A random string" (Use a random key generator for security)
         ```
-        
+
+   - ### Deploying to Heroku.
+        To deploy our application on Heroku, it is essential to have a requirements.txt file and a Procfile. 
+        The two files will inform Heroku what dependencies are required to run the application, 
+        which file to run and ultimately, launch the application.
+        A GitHub repository, which will contain the project is also required.
+
+        1. Create a requirements.txt file by typing in the terminal: "pip3 freeze --local > requirements.txt".
+        2. Create a Procfile by typing in the terminal "ech web: python app.py > Procfile"
+        3. Create an account on [Heroku](heroku.com) and then log in.
+        4. Select "New" and then "Create New App".
+        5. Choose a name for the app and a region.
+        6. Select "Create app"
+        7. In the Deployment method section, select the GitHub option. 
+        8. In the connect to GitHub section, make sure the GitHub profile is displayed.
+        9. Select the repository in the list of the project and then click "connect to this app".
+        10. Go to settings and in the Config Vars section, click "Reveal Config Vars".
+        11. Input all the config variables.
+        12. Return to the Deploy tab.
+        13. Check the "Enable Automatic Deploys"
+        14. Select the "master" branch to deploy.
+        15. Click the "Deploy Branch" button. 
+        16. Scroll to the top and click "Open app" to view the deployed website.
+
+   - ### Forking the Project.
+
+        1. Go to github.com and log in.
+        2. Go to my [repository](https://github.com/Tanyapond/animal-crossing-recipe)
+        3. At the rop right of the page, click the "fork" button.
+        4. Make any changes to the project as you wish.
+        5. If you want to merge the changes to the project: 
+        6. Select the "pull request" button from your forked repository.
+        7. Select the button "new pull request".
+        8. Select the branches to merge with.
+        9. Select the "Create pull request" button.
+    
