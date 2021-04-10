@@ -171,7 +171,7 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
    - ### Forking the Project.
 
         1. Go to github.com and log in.
-        2. Go to my [repository](https://github.com/Tanyapond/animal-crossing-recipe)
+        2. Go to my [repository](https://github.com/Tanyapond/animal-crossing-recipe).
         3. At the rop right of the page, click the "fork" button.
         4. Make any changes to the project as you wish.
         5. If you want to merge the changes to the project: 
@@ -179,4 +179,12 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
         7. Select the button "new pull request".
         8. Select the branches to merge with.
         9. Select the "Create pull request" button.
+
+   - ### Cloning the Project.
+        1. Go to my [repository](https://github.com/Tanyapond/animal-crossing-recipe).
+        2. Click the "Code" button and under the HTTPS tab, copy the URL link by clicking the copy icon.
+        3. Open Git Bash and change the current working directory to the location where you want the cloned directory.
+        4. Type "git clone" followed by the URL you copied earlier, in this case "https://github.com/Tanyapond/animal-crossing-recipe"
+        5. Press Enter to create your local clone.
+
     
