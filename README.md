@@ -154,6 +154,12 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
     - By successfully adding the recipe, the website will redirect back to DIY Recipe and "Recipe is added" message will appear.
     ![](./static/readme/addrecipe-two.png)
 
+  ### Testing - Add Type
+    Testing was performed on the manage type page to ensure the add type button works and all form is filled out correctly without any empty fields.
+   - A red line appears if there's an empty entry or less than 3 characters.
+    ![](./static/readme/addtype.png)
+    - By successfully adding the type, the website will redirect back to Manage Type and a message will appear stating a new Type is added.
+    ![](./static/readme/addtype-two.png)
 
 - ## Testing User Stories from User Experience (UX) Section
     As a visitor of the site, I wish to:
