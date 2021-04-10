@@ -117,7 +117,8 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
      7. A large amount of testing was done to ensure all pages and javascript were working correctly.
 
   ### Testing - Search Bar
-    Testing was done on the search bar by typing the recipes name that exist and the recipe that does not exist.
+    Testing was done on the search bar by typing the recipes name that exist and the recipe that does not exist. By clicking on the Reset button
+    the search bar will be empty again.
      - The searched recipe appear when it exist in database. 
     ![](./static/readme/searchbar.png) 
      - The searched recipe does not appear and a message of no result found appear when it does not exist in database.
@@ -142,6 +143,13 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
     ![](./static/readme/editrecipe-two.png) 
     - By successfully edit the recipe, the website will redirect back to DIY Recipe and a message will appear stating the update is done.
     ![](./static/readme/editrecipe-three.png) 
+
+  ### Testing - Add Recipe
+    Testing was performed on the Add Recipe page to ensure that the form is filled out correctly and without any empty fields.
+    - A red line appears and you won't be able to change it if there's an empty entry in any field or less than 5 characters.
+    ![](./static/readme/addrecipe.png)
+    - By successfully adding the recipe, the website will redirect back to DIY Recipe and "Recipe is added" message will appear.
+    ![](./static/readme/addrecipe-two.png)
 
 
 - ## Testing User Stories from User Experience (UX) Section
