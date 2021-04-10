@@ -198,4 +198,7 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
    - ### Media
       [Fandom](https://animalcrossing.fandom.com/wiki/DIY_recipes) For all the recipes images.
       [WallpaperAccess](https://wallpaperaccess.com/) For the background image.
+
+- ## Acknowledgements
+    I want to thank Code Institute for the teaching program and my mentor, Cans Thank You for guiding me and congratulation on your new baby! 
     
