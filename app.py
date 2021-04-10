@@ -184,10 +184,11 @@ def edit_recipe(recipe_id):
             "materials_needed": request.form.get("materials_needed"),
             "image_url": request.form.get("image_url"),
             "limited_time": limited_time,
-            "created_by": session["user"]
+            "created_by": request.form.get("created_by")
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
+        return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     types = mongo.db.types.find().sort("recipe_type", 1)

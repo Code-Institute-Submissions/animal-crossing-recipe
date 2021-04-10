@@ -116,6 +116,7 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
      6. The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 7, 8 & X and there are no errors.
      7. A large amount of testing was done to ensure all pages and javascript were working correctly.
 
+  ### Testing - Log In and Register
 
 - ## Testing User Stories from User Experience (UX) Section
     As a visitor of the site, I wish to:
