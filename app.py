@@ -35,6 +35,11 @@ def get_recipes():
 # Search Bar
 @app.route("/search", methods=["GET", "POST"])
 def search():
+
+    """
+    Search bar to search of existing recipes.
+    """
+
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
@@ -43,6 +48,13 @@ def search():
 # Register Form
 @app.route("/register", methods=["GET", "POST"])
 def register():
+
+    """
+    Triggers when a user posts the register form.
+    Checks if username is taken and make sure
+    both username and password is valid.
+    """
+
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -67,6 +79,14 @@ def register():
 # Log In
 @app.route("/login", methods=["GET", "POST"])
 def login():
+
+    """
+    Triggers when a user posts the log in form.
+    checks if username and password is correct and
+    logs in a valid user or displays an error if incorrect.
+    """
+
+
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -93,6 +113,12 @@ def login():
 # Profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+
+    """
+    Show log in user's profile and recipes that they
+    added in site.
+    """
+
     recipes = mongo.db.recipes.find()
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -115,6 +141,12 @@ def logout():
 # Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+
+    """
+    Add recipe in the site and warns user if there's
+    an existing recipe.
+    """
+
     if session:
         if request.method == "POST":
             existing_recipes = mongo.db.recipes.find_one(
