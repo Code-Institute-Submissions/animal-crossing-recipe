@@ -164,6 +164,7 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
   ### Testing - Error Page
    Testing was performed when trying to attempt to visit pages that Visitor/Non-user try to access to site that is only for User and Admin.
    Testing was also performed when trying to access pages that doesn't exist in this website.
+    - By accessing to pages that's not allowed or doesn't exist, a custom error page will appear with a link to go back to Homepage.
     ![](./static/readme/error.png)
 
 - ## Testing User Stories from User Experience (UX) Section
