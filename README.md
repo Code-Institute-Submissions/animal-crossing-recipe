@@ -187,4 +187,15 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
         4. Type "git clone" followed by the URL you copied earlier, in this case "https://github.com/Tanyapond/animal-crossing-recipe"
         5. Press Enter to create your local clone.
 
+- ## Tutorials and Credits
+   - ### Code
+      1. [Materialize v1.0.0](https://materializecss.com/) For majority of the page like navbar, card panel, card reveal, popup message and color.
+      2. Code Institute Backend Development Mini Project video.
+      3. [StackOverflow](https://stackoverflow.com/questions/28556370/confirmation-modal-for-flask-not-working-in-a-loop) for the data target code.
+   - ### Content
+      [Fandom](https://animalcrossing.fandom.com/wiki/Animal_Crossing_Wiki) For the game and recipes description.
+      [Animal Crossing](https://animal-crossing.com/) The actual game for recipes.
+   - ### Media
+      [Fandom](https://animalcrossing.fandom.com/wiki/DIY_recipes) For all the recipes images.
+      [WallpaperAccess](https://wallpaperaccess.com/) For the background image.
     
