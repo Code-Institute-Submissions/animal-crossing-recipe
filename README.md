@@ -116,7 +116,11 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
      6. The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 7, 8 & X and there are no errors.
      7. A large amount of testing was done to ensure all pages and javascript were working correctly.
 
-  ### Testing - Log In and Register
+  ### Testing - Log In and Register Form
+    Testing was performed for the Form Submission to ensure that the form is filled out correctly and without empty fields.
+     - A red line appears and please fill out this field message appear when there is an empty entry or less than 5 characters in "Username" and less than 8 characters in "Password" field.
+    ![](./static/readme/login.png) 
+    ![](./static/readme/register.png) 
 
 - ## Testing User Stories from User Experience (UX) Section
     As a visitor of the site, I wish to:
