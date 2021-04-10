@@ -161,6 +161,11 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
     - By successfully adding the type, the website will redirect back to Manage Type and a message will appear stating a new Type is added.
     ![](./static/readme/addtype-two.png)
 
+  ### Testing - Error Page
+   Testing was performed when trying to attempt to visit pages that Visitor/Non-user try to access to site that is only for User and Admin.
+   Testing was also performed when trying to access pages that doesn't exist in this website.
+    ![](./static/readme/error.png)
+
 - ## Testing User Stories from User Experience (UX) Section
     As a visitor of the site, I wish to:
 
