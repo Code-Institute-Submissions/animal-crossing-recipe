@@ -140,6 +140,9 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
     ![](./static/readme/editrecipe.png)
     - A red line appears if you try to leave any one of the fill empty.
     ![](./static/readme/editrecipe-two.png) 
+    - By successfully edit the recipe, the website will redirect back to DIY Recipe and a message will appear stating the update is done.
+    ![](./static/readme/editrecipe-three.png) 
+
 
 - ## Testing User Stories from User Experience (UX) Section
     As a visitor of the site, I wish to:
