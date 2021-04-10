@@ -134,6 +134,13 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
      - A pop up warning message will appear when you click the remove button to double confirm if you really want to remove it.
     ![](./static/readme/warning.png) 
 
+  ### Testing - Edit Button
+    Testing was performed on the Edit button for both recipes and types.
+     - By clicking on the button, it will redirect you to the edit recipe page where all the information will be filled.
+    ![](./static/readme/editrecipe.png)
+    - A red line appears if you try to leave any one of the fill empty.
+    ![](./static/readme/editrecipe-two.png) 
+
 - ## Testing User Stories from User Experience (UX) Section
     As a visitor of the site, I wish to:
 
