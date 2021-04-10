@@ -112,21 +112,17 @@ def login():
 # Profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    if session:
+        recipes = mongo.db.recipes.find()
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
 
-    """
-    Show log in user's profile and recipes that they
-    added in site.
-    """
+        if session["user"]:
+            return render_template(
+                "profile.html", username=username, recipes=recipes)
 
-    recipes = mongo.db.recipes.find()
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-
-    if session["user"]:
-        return render_template(
-            "profile.html", username=username, recipes=recipes)
-
-    return redirect(url_for("login"))
+        return redirect(url_for("login"))
+    return render_template("error.html")
 
 
 # Log Out
