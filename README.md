@@ -139,10 +139,13 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
     Testing was performed on the Edit button for both recipes and types.
      - By clicking on the button, it will redirect you to the edit recipe page where all the information will be filled.
     ![](./static/readme/editrecipe.png)
+    ![](./static/readme/edittype.png)
     - A red line appears if you try to leave any one of the fill empty.
-    ![](./static/readme/editrecipe-two.png) 
+    ![](./static/readme/editrecipe-two.png)
+    ![](./static/readme/edittype-two.png) 
     - By successfully edit the recipe, the website will redirect back to DIY Recipe and a message will appear stating the update is done.
     ![](./static/readme/editrecipe-three.png) 
+    ![](./static/readme/edittype-three.png)
 
   ### Testing - Add Recipe
     Testing was performed on the Add Recipe page to ensure that the form is filled out correctly and without any empty fields.
