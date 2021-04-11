@@ -1,5 +1,5 @@
 # [Animal Crossing DIY Recipe](https://animal-crossing-recipe.herokuapp.com/)
-![](./static/readme/animal-crossing.png) 
+![](./static/readme/animalcrossing.png) 
 
 This Website focuses solely on the DIY Recipes available in Animal Crossing: New 
 Horizons. Search for recipes here and craft it in game. But wait, you discovered a 
