@@ -20,8 +20,8 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
 
     - ### As a Administrative User:
         As a administrative of the site, I wish to:
-        1. Delete and edit existing recipes that is innapropriate. 
-        2. Delete and edit existing recipes that have wrong information.
+        1. Edit existing recipes that is innapropriate and have wrong information. 
+        2. Delete existing recipes that is innapropriate and have wrong information.
         3. Add new Type of recipe.
 
 - ## Design
@@ -170,6 +170,10 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
 - ## Testing User Stories from User Experience (UX) Section
     As a visitor of the site, I wish to:
 
+  - I would like to find recipe.
+
+    Visitor can search for exisitng recipe by typing on the search bar at DIY Recipe page. 
+
   - I would like to browse the website without registering or signing up.
 
     Visitor can browse the recipes anytime they want without register or logging in.
@@ -178,7 +182,6 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
     
     Visitor can register an account for free and the link can be found via navbar.
 
-  - I would like to register an account for the website.
 
   As a Registered User of the site, I wish to:
 
@@ -195,20 +198,16 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
 
     User can add recipe by clicking on the Add DIY Recipe on navbar.
 
-  - I would like to view my recipes.
-    
-    User can view it on their profile
-
   - I would like to remove my recipe. 
 
     User can remove recipe that's created by user on user's profile or DIY recipe page and a popout message will 
     appear as a warning to confirm remove.
 
+  - I would like to view my recipes.
+    
+    User can view it on their profile
+
   As a Administrative of the site, I wish to:
-
-  - I would like to add a type to the database. 
-
-    Admin can add more type selection by clicking on Manage Type at navbar that's only accessable for admin only.
 
   - I would like to edit an existing recipe.
 
@@ -219,6 +218,10 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
 
     Admin can find the delete button on the recipe at either DIY recipe page or profile page to remove the recipe and
     a popout message will appear as a warning to confirm remove.
+
+  - I would like to add a type to the database. 
+
+    Admin can add more type selection by clicking on Manage Type at navbar that's only accessable for admin only.
   
 
 - ## Database
