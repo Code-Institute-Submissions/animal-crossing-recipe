@@ -1,4 +1,4 @@
-# [Animal Crossing DIY Recipe](https://animal-crossing-recipe.herokuapp.com/)
+# [Animal Crossing Recipe](https://animal-crossing-recipe.herokuapp.com/)
 ![](./static/readme/animalcrossing.png) 
 
 This Website focuses solely on the DIY Recipes available in Animal Crossing: New 
