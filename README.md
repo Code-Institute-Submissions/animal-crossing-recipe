@@ -168,7 +168,7 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
     ![](./static/readme/error.png)
 
 - ## Testing User Stories from User Experience (UX) Section
-    As a visitor of the site, I wish to:
+    As a visitor of the site:
 
   - I would like to find recipe.
 
@@ -183,7 +183,7 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
     Visitor can register an account for free and the link can be found via navbar.
 
 
-  As a Registered User of the site, I wish to:
+  As a Registered User of the site:
 
   - I would like to login to the website.
     
@@ -207,7 +207,7 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
     
     User can view it on their profile
 
-  As a Administrative of the site, I wish to:
+  As a Administrative of the site:
 
   - I would like to edit an existing recipe.
 
