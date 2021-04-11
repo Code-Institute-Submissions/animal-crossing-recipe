@@ -22,8 +22,8 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
 
     - ### As a Administrative User:
         As a administrative of the site, I wish to:
-        1. Edit existing recipes that is innapropriate and have wrong information. 
-        2. Delete existing recipes that is innapropriate and have wrong information.
+        1. Edit existing recipes that is innapropriate/ wrong information. 
+        2. Delete existing recipes that is innapropriate/ wrong information.
         3. Add new Type of recipe into the database.
 
 - ## Design
@@ -48,10 +48,9 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
         There is also a button to redirect to the Recipes page.
 
     - ### DIY Recipe page
-        A search bar will be on top of the page for users to search for existing reicpes and also to make
-        sure users doesn't add an existing recipe to the site. Below the search bar will be where all the
-        recipes card be, users can click on the image to triggers more information to be shown. Only user
-        that created the recipe can edit or remove it.
+        A search bar will be on top of the page for users to search for existing recipes and also to make sure users don't add an existing recipe to the site. 
+        The page will show all existing recipes where users can click the image. This will trigger more information to be shown. Registered users can only edit 
+        or remove their own created recipes.
 
     - ### Log In page
         Registered user can input their username and password info to log in to the site. If either one of the
@@ -62,31 +61,33 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
         username and password on the form.
 
     - ### Profile page
-        Page will show user's profile with their name and the recipe they added to the site. For conveniency
-        user's can also edit or remove their recipe on this page.
+        Page will show user's profile with their name and the recipe they added to the site. For convenience, users can also edit or remove their recipe on this page.
 
     - ### Add DIY Recipe page 
-        User can feel free to add recipe they found in game here by filling the form with valid input. If there's
-        existing recipe a flash message will appear to warn user. 
+        Users are free to add recipes they found in game by filling the form. The forms have validation checks per input field. If a recipe already exists, a flash message 
+        will appear to notify the user.
 
     - ### Manage Type page
-        Admin only page, it's for admin to add more type choices in the website for user to choose from. Admin can 
-        remove and edit the Type here as well.
+        Admin page access only. The admin is able to add more Types to the database for users to choose from. The Admin can remove and edit the Type here as well.
 
     - ### Edit Recipe page
-        This function can be access in user's profile and DIY Recipe page if that recipe belong to the user. Can change
-        or update previous information here.
+        This page can be accessed from the user's profile or DIY Recipe page(for recipes created by the user only, button links will appear). The user can change or 
+        update recipe information here.
 
     - ### Edit Type page
         This function is only available for admin in the manage type page, it's for admin to change the type.
 
     - ### Remove button
-        This function can be access at all recipes card and type. When removing a recipe/type a popup will appear to warn
-        user/admin before they want to remove it.
+        This function can be accessed for recipe cards and Type. When clicking the Remove button for a recipe/type, a popup will appear to warn user/admin to confirm the removal.
 
-    - ### Custom error 404 page
+    - ### Custom error page
         An errorhandler code created for a custom 404 page. The page will advise the visitor/user that an error has 
         occured and a link to redirect them back to the homepage.
+
+        - Defensive Programming
+          
+          Implemented defensive programming for user permissions. An example would be where a user that is not logged in is unable to access the Add Recipe page when attempting to 
+          write the URL manually. A page will show that this is unavailable and a link to redirect back to homepage.
 
 - ## Technologies Used
    - ### Languages
@@ -118,9 +119,9 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
      7. A large amount of testing was done to ensure all pages and javascript were working correctly.
 
   ### Testing - Search Bar
-    Testing was done on the search bar by typing the recipes name that exist and the recipe that does not exist. By clicking on the Reset button
-    the search bar will be empty again.
-     - The searched recipe appear when it exist in database. 
+    Testing was done for the search bar by typing the recipe names that exist and recipes that don't exist. By clicking on the Reset button the search bar will be empty and 
+    all existing recipes will appear.
+     - The searched recipe appears if it exists in the database. 
     ![](./static/readme/searchbar.png) 
      - The searched recipe does not appear and a message of no result found appear when it does not exist in database.
     ![](./static/readme/searchnotfound.png) 
@@ -130,6 +131,11 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
      - A red line appears and please fill out this field message appear when there is an empty entry or less than 5 characters in "Username" and less than 8 characters in "Password" field.
     ![](./static/readme/login.png) 
     ![](./static/readme/register.png) 
+
+  ### Testing - Profile
+    Testing was performed on the Profile page to ensure that recipes is shown.
+     - Recipe that is created by User will be shown here in their profile page.
+    ![](./static/readme/profile.png)
 
   ### Testing - Remove button
     Testing was performed on the remove button for both recipes and types.
@@ -141,10 +147,10 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
      - By clicking on the button, it will redirect you to the edit recipe page where all the information will be filled.
     ![](./static/readme/editrecipe.png)
     ![](./static/readme/edittype.png)
-    - A red line appears if you try to leave any one of the fill empty.
+    - A red line appears if you try to leave any of the fields empty.
     ![](./static/readme/editrecipe-two.png)
     ![](./static/readme/edittype-two.png) 
-    - By successfully edit the recipe, the website will redirect back to DIY Recipe and a message will appear stating the update is done.
+    - By successfully editing the recipe, the website will redirect back to the DIY Recipe page with a message stating "Recipe Successfully Updated"
     ![](./static/readme/editrecipe-three.png) 
     ![](./static/readme/edittype-three.png)
 
@@ -210,12 +216,12 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
 
   As an Administrative of the site:
 
-  - I would like to edit an existing recipe incase of innapropriate and have wrong information.
+  - I would like to edit an existing recipe in case of inappropriate/wrong information.
 
     An admin can find the Edit button on the recipe at either DIY recipe page or profile page to start 
     editing recipe.
 
-  - I would like to remove an existing recipe incase of innapropriate and have wrong information.
+  - I would like to remove an existing recipe in case of inappropriate/wrong information.
 
     An admin can find the delete button on the recipe at either DIY recipe page or profile page to remove the recipe and
     a popout message will appear as a warning to confirm remove.
