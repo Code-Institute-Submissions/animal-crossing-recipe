@@ -78,6 +78,10 @@ footer {
     white-space: nowrap;
   }
 
+  .brand-logo h5 {
+      font-size: 20px;
+  }
+
   .about-us {
       margin-top: 2em;
   }

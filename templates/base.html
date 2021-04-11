@@ -39,7 +39,7 @@
 
         <!--phone nav bar-->
         <ul class="sidenav yellow accent-4" id="mobile-demo">
-            <li><h5 class="center-align logo-color nav-heading">Animal Crossing DIY Recipe</h5></li>
+            <li><h6 class="center-align logo-color nav-heading">Animal Crossing DIY Recipe</h6></li>
             <li><a href="{{ url_for('get_recipes') }}">DIY Recipe</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}" class="kiwi-font">Profile</a></li>
