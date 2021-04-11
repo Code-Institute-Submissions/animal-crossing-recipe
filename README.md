@@ -9,20 +9,22 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
    - ### As a New Visiter:
         As a new visitor of the site, I wish to:
         1. Find Recipe that I need.
-        2. Browse Recipe without loggin.
+        2. Browse Recipe without loggin or signing up.
         3. Register for an account.
 
     - ### As a Registered User:
         As a user of the site, I wish to:
         1. Log in to the site.
-        2. Edit, Remove and Add recipes.
+        2. Edit recipes that I added.
+        3. Add new recipes.
+        4. Remove recipes that I added.
         3. View recipes that I added. 
 
     - ### As a Administrative User:
         As a administrative of the site, I wish to:
         1. Edit existing recipes that is innapropriate and have wrong information. 
         2. Delete existing recipes that is innapropriate and have wrong information.
-        3. Add new Type of recipe.
+        3. Add new Type of recipe into the database.
 
 - ## Design
    - ### Color Theme
@@ -42,9 +44,8 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
        menu which can be open by clicking on the down arrow button.
 
     - ### Home Page
-        There will be a panel describing what this website is for, what type of game is Animal
-        Crossing and what/how do you do with crafting. There is also a button to redirect to 
-        the Recipes page.
+        The welcome panel describes the website, information about the video game Animal Crossing and how to craft items in-game. 
+        There is also a button to redirect to the Recipes page.
 
     - ### DIY Recipe page
         A search bar will be on top of the page for users to search for existing reicpes and also to make
@@ -187,41 +188,41 @@ recipe?! Feel free to ADD the recipe by yourself here if its not on the site alr
 
   - I would like to login to the website.
     
-    User can find the log in page from the navbar.
+    A user can find the log in page from the navbar.
 
   - I would like to edit the recipes.
 
-    User can click the Edit button on the recipe at either DIY recipe page or Profile page to start 
+    A user can click the Edit button on the recipe at either DIY recipe page or Profile page to start 
     editing recipe that's created by user.
 
   - I would like to add a recipe to the website.
 
-    User can add recipe by clicking on the Add DIY Recipe on navbar.
+    A user can add recipe by clicking on the Add DIY Recipe on navbar.
 
   - I would like to remove my recipe. 
 
-    User can remove recipe that's created by user on user's profile or DIY recipe page and a popout message will 
+    A user can remove recipe that's created by user on user's profile or DIY recipe page and a popout message will 
     appear as a warning to confirm remove.
 
   - I would like to view my recipes.
     
-    User can view it on their profile
+    A user can view it on their profile
 
-  As a Administrative of the site:
+  As an Administrative of the site:
 
-  - I would like to edit an existing recipe.
+  - I would like to edit an existing recipe incase of innapropriate and have wrong information.
 
-    Admin can find the Edit button on the recipe at either DIY recipe page or profile page to start 
+    An admin can find the Edit button on the recipe at either DIY recipe page or profile page to start 
     editing recipe.
 
-  - I would like to remove an existing recipe.
+  - I would like to remove an existing recipe incase of innapropriate and have wrong information.
 
-    Admin can find the delete button on the recipe at either DIY recipe page or profile page to remove the recipe and
+    An admin can find the delete button on the recipe at either DIY recipe page or profile page to remove the recipe and
     a popout message will appear as a warning to confirm remove.
 
   - I would like to add a type to the database. 
 
-    Admin can add more type selection by clicking on Manage Type at navbar that's only accessable for admin only.
+    An admin can add more type selection by clicking on Manage Type at navbar that's only accessable for admin only.
   
 
 - ## Database
